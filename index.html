@@ -13,10 +13,21 @@
                 <button onclick="openOnglet(event, 'colorpicker')">FROM COLOR WHEEL</button>
             </div>
             <div class="tabcontent" id="imagepicker">
-                <div class="img-display">
-                    <img src="./default-img.png" alt="">
+                <img class="img-display" src="./default-img.png"></img>
+                <div class="color-display">
+                    <h3>Colors</h3>
+                    <section>
+                        <div class="colors">
+                            <div class="color chosen"></div>
+                            <div class="color"></div>
+                        </div>
+                        <div class="values">
+                            <div class="value">HEX: #00000</div>
+                            <div class="value">RGB: rgba(0,0,0,0)</div>
+                        </div>
+                    </section>
+                    <button>LOAD IMAGE</button>
                 </div>
-                <div class="color-display"></div>
             </div>
             <div class="tabcontent" id="colorpicker">
                 colorpicker
