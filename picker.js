@@ -1,5 +1,11 @@
+const SPACE = "";
+
 const pipeButton = document.querySelector(".pipe");
 const pickedColor = document.querySelector(".picked-color");
+const hex = document.getElementById("hex");
+const hexCopyButton = document.querySelector("#hex + span");
+const rgbCopyButton = document.querySelector("#rgb + span");
+const rgb = document.getElementById("rgb");
 
 colorpicker.style.display = "none";
 
@@ -23,12 +29,12 @@ const pickColor = async () => {
 };
 
 pipeButton.addEventListener("click", pickColor);
+hexCopyButton.addEventListener("click", copyHexValue);
+rgbCopyButton.addEventListener("click", copyRgbValue);
 
 function hexToRgb(sRGBHex) {
-     let hex = document.getElementById("hex");
      hex.innerHTML = `HEX: ${sRGBHex}`;
 
-     let rgb = document.getElementById("rgb");
      // Remove the hash (#) if it exists
      sRGBHex = sRGBHex.replace(/^#/, "");
 
@@ -40,4 +46,12 @@ function hexToRgb(sRGBHex) {
 
      // Return the RGB values as an object
      rgb.innerHTML = `RGB: rgb(${r}, ${g}, ${b})`;
+}
+
+function copyHexValue() {
+     navigator.clipboard.writeText(hex.innerHTML.split("HEX: ")[1]);
+}
+
+function copyRgbValue() {
+     navigator.clipboard.writeText(rgb.innerHTML.split("RGB: ")[1]);
 }
