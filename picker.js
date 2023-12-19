@@ -1,5 +1,5 @@
 const pipeButton = document.querySelector(".pipe");
-const chosenColor = document.querySelector(".color.chosen");
+const pickedColor = document.querySelector(".picked-color");
 
 colorpicker.style.display = "none";
 
@@ -18,7 +18,7 @@ const pickColor = async () => {
      let { sRGBHex } = await eyeDropper.open();
 
      console.log(sRGBHex);
-     chosenColor.style.backgroundColor = sRGBHex;
+     pickedColor.style.backgroundColor = sRGBHex;
      hexToRgb(sRGBHex);
 };
 

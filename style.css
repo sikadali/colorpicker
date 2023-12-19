@@ -114,15 +114,12 @@
     align-items: center;
 }
 
-.colors .color {
+.colors .picked-color {
     width: 60px;
     height: 30px;
     border-radius: 6px;
     margin: 10px;
     box-shadow: 2px 2px 5px rgb(212, 212, 212);
-}
-
-.colors .chosen.color {
     height: 60px;
 }
 
