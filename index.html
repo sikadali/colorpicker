@@ -5,12 +5,19 @@
         <title>Color Picker</title>
         <link href="style.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
     <body>
         <div class="container">
             <div class="navbar">
-                <button onclick="openOnglet(event, 'imagepicker')">FROM IMAGE</button>
-                <button onclick="openOnglet(event, 'colorpicker')">FROM COLOR WHEEL</button>
+                <div class="onglets">
+                    <button onclick="openOnglet(event, 'imagepicker')">FROM IMAGE</button>
+                    <button onclick="openOnglet(event, 'colorpicker')">FROM COLOR WHEEL</button>
+                </div>
+                <div class="logo">
+                    <h1>Color Picker</h1>
+                    <span class="material-icons">colorize</span>
+                </div>
             </div>
             <div class="tabcontent" id="imagepicker">
                 <img class="img-display" src="./default-img.png"></img>
@@ -22,8 +29,14 @@
                             <div class="color"></div>
                         </div>
                         <div class="values">
-                            <div class="value">HEX: #00000</div>
-                            <div class="value">RGB: rgba(0,0,0,0)</div>
+                            <div class="value">
+                                <div>HEX: #00000</div>
+                                <span class="material-icons">content_copy</span>
+                            </div>
+                            <div class="value">
+                                <div>RGB: rgb(0,0,0,0)</div>
+                                <span class="material-icons">content_copy</span>
+                            </div>
                         </div>
                     </section>
                     <button>LOAD IMAGE</button>
