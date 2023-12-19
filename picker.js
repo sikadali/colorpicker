@@ -8,6 +8,7 @@ const rgbCopyButton = document.querySelector("#rgb + span");
 const rgb = document.getElementById("rgb");
 
 colorpicker.style.display = "none";
+notif.style.display = "none";
 
 function openOnglet(event, id) {
      let tabcontents = Array.from(document.getElementsByClassName("tabcontent"));
@@ -50,8 +51,17 @@ function hexToRgb(sRGBHex) {
 
 function copyHexValue() {
      navigator.clipboard.writeText(hex.innerHTML.split("HEX: ")[1]);
+     popNotif();
 }
 
 function copyRgbValue() {
      navigator.clipboard.writeText(rgb.innerHTML.split("RGB: ")[1]);
+     popNotif();
+}
+
+function popNotif() {
+     notif.style.display = "block";
+     setTimeout(() => {
+          notif.style.display = "none";
+     }, 2000);
 }

@@ -13,7 +13,7 @@
 
 .navbar {
     padding: 20px;
-    background: #bdbdbd;
+    background: var(--theme-color);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -173,4 +173,29 @@
     100% {
         opacity: 1;
     }
+}
+
+@keyframes animationClear {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+#notif {
+    border: none;
+    border-radius: 5px;
+    background: var(--theme-color);
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    padding: 20px;
+    width: 300px;
+    animation: animation 0.5s ease;
+}
+
+:root{
+    --theme-color: rgb(189, 189, 189);
 }
