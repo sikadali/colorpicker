@@ -59,7 +59,7 @@
 }
 
 .tabcontent {
-    animation: animation 0.5s ease;
+    animation: fade-in 0.5s ease;
 }
 
 #imagepicker {
@@ -164,25 +164,7 @@
 .color-display button:hover {
     background: rgb(202, 202, 202);
     color: black
-}
-
-@keyframes animation {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes animationClear {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
+} 
 
 #notif {
     border: none;
@@ -193,9 +175,15 @@
     bottom: 50px;
     padding: 20px;
     width: 300px;
-    animation: animation 0.5s ease;
+    animation: fade-and-slide-in 0.5s ease;
 }
 
 :root{
     --theme-color: rgb(189, 189, 189);
 }
+
+
+@keyframes fade-and-slide-in { 
+    from { opacity: 0; transform: translateY(100%); } 
+    to { opacity: 1; transform: translateY(0); } 
+} 
