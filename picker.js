@@ -6,6 +6,8 @@ const hex = document.getElementById("hex");
 const hexCopyButton = document.querySelector("#hex + span");
 const rgbCopyButton = document.querySelector("#rgb + span");
 const rgb = document.getElementById("rgb");
+const inputFile = document.getElementById("input-file");
+const image = document.querySelector("#imagepicker .img-display");
 
 colorpicker.style.display = "none";
 notif.style.display = "none";
@@ -65,3 +67,7 @@ function popNotif() {
           notif.style.display = "none";
      }, 2000);
 }
+
+inputFile.onchange = () => {
+     image.src = URL.createObjectURL(inputFile.files[0]);
+};

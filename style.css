@@ -150,21 +150,28 @@
     color: rgb(141, 141, 141);
 }
 
-.color-display button {
+.color-display label {
     padding: 10px;
     border: none;
+    outline: none;
     border-radius: 7px;
     background: rgb(0, 0, 0);
     color: white;
     width: 150px;
     align-self: center;
+    text-align: center;
     transition: all 0.2s;
+    cursor: pointer;
 }
 
-.color-display button:hover {
+.color-display label:hover {
     background: rgb(202, 202, 202);
     color: black
 } 
+
+.color-display input {
+    display: none;
+}
 
 #notif {
     border: none;
