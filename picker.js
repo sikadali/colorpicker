@@ -9,17 +9,7 @@ const rgb = document.getElementById("rgb");
 const inputFile = document.getElementById("input-file");
 const image = document.querySelector("#imagepicker .img-display");
 
-colorpicker.style.display = "none";
 notif.style.display = "none";
-
-function openOnglet(event, id) {
-     let tabcontents = Array.from(document.getElementsByClassName("tabcontent"));
-     tabcontents.forEach((content) => {
-          content.style.display = "none";
-     });
-
-     document.getElementById(id).style.display = "flex";
-}
 
 const pickColor = async () => {
      let eyeDropper = new EyeDropper();

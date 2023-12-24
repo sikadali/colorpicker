@@ -10,11 +10,7 @@
     <body>
         <div class="container">
             <div class="navbar">
-                <div class="onglets">
-                    <button onclick="openOnglet(event, 'imagepicker')">FROM IMAGE</button>
-                    <button onclick="openOnglet(event, 'colorpicker')">FROM COLOR WHEEL</button>
-                </div>
-                <div class="logo" onclick="openOnglet(event, 'imagepicker')">
+                <div class="logo">
                     <h1>Color Picker</h1>
                     <span class="material-icons">colorize</span>
                 </div>
@@ -45,12 +41,6 @@
 
                 </div>
             </div>
-            <div class="tabcontent" id="colorpicker">
-                colorpicker
-                <div class="colorwheel"></div>
-                <div class="color"></div>
-                <div class="color-conversion"></div>
-            </div> 
             <div id="notif">Copied to clipboard</div>
         </div>
         <script src="picker.js"></script>

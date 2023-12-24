@@ -16,29 +16,7 @@
     background: var(--theme-color);
     display: flex;
     align-items: center;
-    justify-content: space-between;
-}
-
-.onglets {
-    display: flex;
-    gap: 30px
-}
-
-.onglets button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    background: #fff;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: 600;
-    color: #000;
-    transition: all 0.2s;
-}
-
-.onglets button:hover {
-    background: #000;
-    color: #fff;
+    justify-content: flex-end;
 }
 
 .logo {
