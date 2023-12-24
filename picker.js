@@ -1,6 +1,7 @@
 const SPACE = "";
 
 const pipeButton = document.querySelector(".pipe");
+const zoomInButton = document.querySelector(".zoom-in");
 const pickedColor = document.querySelector(".picked-color");
 const hex = document.getElementById("hex");
 const hexCopyButton = document.querySelector("#hex + span");
@@ -11,7 +12,12 @@ const image = document.querySelector("#imagepicker .img-display");
 
 notif.style.display = "none";
 
-const pickColor = async () => {
+pipeButton.addEventListener("click", pickColor);
+hexCopyButton.addEventListener("click", copyHexValue);
+rgbCopyButton.addEventListener("click", copyRgbValue);
+inputFile.addEventListener("change", getFileUrl);
+
+async function pickColor() {
      let eyeDropper = new EyeDropper();
 
      let { sRGBHex } = await eyeDropper.open();
@@ -19,11 +25,7 @@ const pickColor = async () => {
      console.log(sRGBHex);
      pickedColor.style.backgroundColor = sRGBHex;
      hexToRgb(sRGBHex);
-};
-
-pipeButton.addEventListener("click", pickColor);
-hexCopyButton.addEventListener("click", copyHexValue);
-rgbCopyButton.addEventListener("click", copyRgbValue);
+}
 
 function hexToRgb(sRGBHex) {
      hex.innerHTML = `HEX: ${sRGBHex}`;
@@ -58,6 +60,6 @@ function popNotif() {
      }, 2000);
 }
 
-inputFile.onchange = () => {
+function getFileUrl() {
      image.src = URL.createObjectURL(inputFile.files[0]);
-};
+}
