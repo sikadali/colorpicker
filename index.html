@@ -17,10 +17,18 @@
             </div>
             <div class="tabcontent" id="imagepicker">
                 <span class="pipe icon material-icons">colorize</span>
+
                 <div class="img-container">
-                    <img class="img-display" src="./default-img.jpg"></img>
-                    <span class="zoom-in icon material-symbols-outlined">zoom_in</span>
+                    <div id="image-frame">
+                        <img class="img-display" src="./default-img.jpg" alt="Image where to pick colors"></img>
+                    </div>
+                    <div class="img-controls">
+                        <span class="zoom-in icon material-symbols-outlined" onclick="zoomIn()">zoom_in</span>
+                        <span class="zoom-out icon material-symbols-outlined" onclick="zoomOut()">zoom_out</span>
+                        <span class="center-focus icon material-symbols-outlined">center_focus_strong</span>
+                    </div>
                 </div>
+                
                 <div class="color-display">
                     <h3>Colors</h3>
                     <section>
@@ -38,10 +46,8 @@
                             </div>
                         </div>
                     </section>
-                    <!--<button id="loadBtn" onclick="loadFile()">LOAD IMAGE</button>-->
                     <label for="input-file">LOAD IMAGE</button>
                     <input type="file" id="input-file" accept="image/jpeg, image/png, image/jpg">
-
                 </div>
             </div>
             <div id="notif">Copied to clipboard</div>

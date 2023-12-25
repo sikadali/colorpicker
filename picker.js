@@ -2,6 +2,8 @@ const SPACE = "";
 
 const pipeButton = document.querySelector(".pipe");
 const zoomInButton = document.querySelector(".zoom-in");
+const zoomOutButton = document.querySelector(".zoom-out");
+const centerFocusButton = document.querySelector(".center-focus");
 const pickedColor = document.querySelector(".picked-color");
 const hex = document.getElementById("hex");
 const hexCopyButton = document.querySelector("#hex + span");
@@ -13,6 +15,7 @@ const image = document.querySelector("#imagepicker .img-display");
 notif.style.display = "none";
 
 pipeButton.addEventListener("click", pickColor);
+zoomInButton.addEventListener("click", zoomIn);
 hexCopyButton.addEventListener("click", copyHexValue);
 rgbCopyButton.addEventListener("click", copyRgbValue);
 inputFile.addEventListener("change", getFileUrl);
@@ -62,4 +65,21 @@ function popNotif() {
 
 function getFileUrl() {
      image.src = URL.createObjectURL(inputFile.files[0]);
+}
+
+let scale = 1;
+function zoomIn() {
+     scale += 0.1;
+     updateTransform();
+}
+function zoomOut() {
+     scale -= 0.1;
+     updateTransform();
+}
+function zoomOut() {
+     scale -= 0.1;
+     updateTransform();
+}
+function updateTransform() {
+     image.style.transform = `scale(${scale})`;
 }

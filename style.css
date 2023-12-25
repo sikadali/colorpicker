@@ -63,12 +63,15 @@
     color: white;
 }
 
-.img-display {
-    padding: 20px;
-    height: 400px;
+#image-frame {
     border: none;
     box-shadow: 2px 2px 15px rgb(212, 212, 212);
     border-radius: 5px;
+    overflow: hidden;
+}
+
+.img-display {
+    height: 400px;
 }
 
 .color-display {
